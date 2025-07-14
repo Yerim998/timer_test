@@ -3,9 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>완성 타이머</title>
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/timer.js" defer></script>
-    <title></title>
   </head>
-  <body></body>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <img src="img/weniv-logo.svg" alt="weniv logo" />
+      </header>
+      <main class="main">
+        <div class="timer-card">
+          <h1>TIMER</h1>
+          <hr />
+          <div class="time-display">
+            <div class="time-unit">
+              <p>HRS</p>
+              <div class="time-box">
+                <input type="number" id="hours" value="0" min="0" />
+              </div>
+            </div>
+            <img src="img/dot.png" alt="dot" class="dot" />
+            <div class="time-unit">
+              <p>MIN</p>
+              <div class="time-box">
+                <input
+                  type="number"
+                  id="minutes"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  value="0"
+                  min="0"
+                  max="59" />
+              </div>
+            </div>
+            <img src="img/dot.png" alt="dot" class="dot" />
+            <div class="time-unit">
+              <p>SEC</p>
+              <div class="time-box">
+                <input type="number" id="seconds" value="0" min="0" max="59" />
+              </div>
+            </div>
+          </div>
+          <div class="button-group">
+            <button id="startStopBtn" class="start" disabled>
+              <img
+                id="startStopIcon"
+                src="img/start-disabled.png"
+                alt="start" />
+            </button>
+            <button id="resetBtn" class="reset" disabled>
+              <img id="resetIcon" src="img/reset-disabled.png" alt="reset" />
+            </button>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">© WENIV CORP.</footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
